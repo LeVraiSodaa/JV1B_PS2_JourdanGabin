@@ -3,8 +3,10 @@ using UnityEngine;
 public class AttackRange : MonoBehaviour
 {
     public float attackRadius = 2f; // Rayon d'attaque du cercle
+    public float attackCooldown = 0.5f; // Délai entre chaque utilisation du bouton "X"
     private bool isCircleVisible = false; // État d'affichage du cercle
     private SpriteRenderer circleRenderer; // Référence au composant SpriteRenderer du cercle
+    private float lastAttackTime = 0f; // Temps de la dernière utilisation du bouton "X"
 
     void Start()
     {
@@ -21,24 +23,34 @@ public class AttackRange : MonoBehaviour
             UpdateCircleVisibility(); // Met à jour l'affichage du cercle
         }
 
-        // Détecte les ennemis à l'intérieur du cercle et détruit-les si la touche "X" est enfoncée
-        if (Input.GetKeyDown(KeyCode.X))
+        // Vérifie si le joueur peut attaquer
+        if (Input.GetKeyDown(KeyCode.X) && Time.time >= lastAttackTime + attackCooldown)
         {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRadius);
-            foreach (Collider2D enemyCollider in hitEnemies)
+            // Effectue l'attaque
+            Attack();
+
+            // Met à jour le temps de la dernière utilisation du bouton "X"
+            lastAttackTime = Time.time;
+        }
+    }
+
+    // Fonction pour effectuer l'attaque
+    void Attack()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRadius);
+        foreach (Collider2D enemyCollider in hitEnemies)
+        {
+            if (enemyCollider.CompareTag("Enemy"))
             {
-                if (enemyCollider.CompareTag("Enemy"))
+                // Vérifie que l'ennemi n'est pas le joueur lui-même
+                if (enemyCollider.gameObject != gameObject)
                 {
-                    // Vérifie que l'ennemi n'est pas le joueur lui-même
-                    if (enemyCollider.gameObject != gameObject)
+                    // Récupère le composant Enemy attaché à l'ennemi
+                    Enemy enemy = enemyCollider.GetComponent<Enemy>();
+                    if (enemy != null)
                     {
-                        // Récupère le composant Enemy attaché à l'ennemi
-                        Enemy enemy = enemyCollider.GetComponent<Enemy>();
-                        if (enemy != null)
-                        {
-                            // Appelle la fonction Die de l'ennemi pour le détruire
-                            enemy.Die();
-                        }
+                        // Appelle la fonction Die de l'ennemi pour le détruire
+                        enemy.Die();
                     }
                 }
             }
