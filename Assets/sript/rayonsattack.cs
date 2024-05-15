@@ -4,6 +4,13 @@ public class AttackRange : MonoBehaviour
 {
     public float attackRadius = 2f; // Rayon d'attaque du cercle
     private bool isCircleVisible = false; // État d'affichage du cercle
+    private SpriteRenderer circleRenderer; // Référence au composant SpriteRenderer du cercle
+
+    void Start()
+    {
+        // Récupère le composant SpriteRenderer du cercle
+        circleRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -14,18 +21,16 @@ public class AttackRange : MonoBehaviour
             UpdateCircleVisibility(); // Met à jour l'affichage du cercle
         }
 
-        // Si le cercle est affiché, détecte les ennemis à l'intérieur du cercle et détruit-les
-        if (isCircleVisible)
+        // Détecte les ennemis à l'intérieur du cercle et détruit-les si la touche "X" est enfoncée
+        if (Input.GetKeyDown(KeyCode.X))
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRadius);
             foreach (Collider2D enemyCollider in hitEnemies)
             {
                 if (enemyCollider.CompareTag("Enemy"))
                 {
-                    // Calcule la distance entre le centre du cercle et la position de l'ennemi
-                    float distanceToEnemy = Vector2.Distance(transform.position, enemyCollider.transform.position);
-                    // Vérifie si l'ennemi est à l'intérieur du cercle
-                    if (distanceToEnemy <= attackRadius)
+                    // Vérifie que l'ennemi n'est pas le joueur lui-même
+                    if (enemyCollider.gameObject != gameObject)
                     {
                         // Récupère le composant Enemy attaché à l'ennemi
                         Enemy enemy = enemyCollider.GetComponent<Enemy>();
@@ -43,12 +48,9 @@ public class AttackRange : MonoBehaviour
     // Fonction pour mettre à jour l'affichage du cercle
     private void UpdateCircleVisibility()
     {
-        // Active ou désactive le rendu du cercle en fonction de l'état d'affichage
-        GetComponent<SpriteRenderer>().enabled = isCircleVisible;
-
-        // Ajuste l'opacité du cercle en fonction de l'état d'affichage
-        Color circleColor = GetComponent<SpriteRenderer>().color;
-        circleColor.a = isCircleVisible ? 1f : 0f;
-        GetComponent<SpriteRenderer>().color = circleColor;
+        // Ajuste l'alpha du sprite renderer en fonction de l'état d'affichage du cercle
+        Color circleColor = circleRenderer.color;
+        circleColor.a = isCircleVisible ? 0.2f : 0f;
+        circleRenderer.color = circleColor;
     }
 }

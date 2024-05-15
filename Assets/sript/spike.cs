@@ -12,5 +12,11 @@ public class PlayerCollision : MonoBehaviour
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Relance la scène actuelle
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
     }
 }
