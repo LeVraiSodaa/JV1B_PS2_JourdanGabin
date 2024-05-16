@@ -7,5 +7,6 @@ public class Enemy : MonoBehaviour
     {
         // Détruit l'ennemi
         Destroy(gameObject);
+        EnemyCounter.EnemyKilled();
     }
 }
