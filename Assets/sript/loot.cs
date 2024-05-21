@@ -34,8 +34,7 @@ public class EnemyCounter : MonoBehaviour
             // Vérifie si le joueur a tué trois ennemis
             if (enemiesKilled >= 3)
             {
-                // Active la fonctionnalité associée à la touche "W" sur le joueur
-                enemyCounter.player.GetComponent<PlayerController>().EnableSpecialAbility();
+                
             }
         }
     }
