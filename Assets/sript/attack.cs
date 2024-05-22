@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float attackRadius = 2f; // Rayon d'attaque du cercle
+    public float attackRadius = 1.5f; // Rayon d'attaque du cercle
 
     void Update()
     {

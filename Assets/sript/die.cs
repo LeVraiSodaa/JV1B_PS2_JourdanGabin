@@ -23,4 +23,13 @@ public class Enemy : MonoBehaviour
         // Code pour détruire l'ennemi
         Destroy(gameObject);
     }
+    void OnDestroy()
+    {
+        // Assurez-vous de vérifier que l'ennemi est tué par le joueur
+        PowerBarController powerBarController = FindObjectOfType<PowerBarController>();
+        if (powerBarController != null)
+        {
+            powerBarController.EnemyKilled();
+        }
+    }
 }
