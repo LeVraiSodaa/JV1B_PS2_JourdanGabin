@@ -223,6 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd967bf49f0f2fc44a13f44b476b612a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredEliminations: 3
+  nextSceneName: Scene1
 --- !u!61 &780338496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,7 +765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138798640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f65d7a6a716743908576e86099ac5, type: 3}
   m_Name: 

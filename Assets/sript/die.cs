@@ -2,11 +2,25 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Fonction appelée lorsque l'ennemi meurt
+    // Référence à l'EnemyKillCounter
+    private EnemyKillCounter enemyKillCounter;
+
+    void Start()
+    {
+        // Trouver l'EnemyKillCounter dans la scène
+        enemyKillCounter = GameObject.FindObjectOfType<EnemyKillCounter>();
+    }
+
+    // Méthode pour détruire l'ennemi
     public void Die()
     {
-        // Détruit l'ennemi
+        // Appeler la méthode pour augmenter le compteur d'ennemis
+        if (enemyKillCounter != null)
+        {
+            enemyKillCounter.EnemyDestroyed();
+        }
+
+        // Code pour détruire l'ennemi
         Destroy(gameObject);
-        EnemyCounter.EnemyKilled();
     }
 }
