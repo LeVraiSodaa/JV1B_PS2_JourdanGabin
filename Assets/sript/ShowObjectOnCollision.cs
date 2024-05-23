@@ -2,23 +2,21 @@ using UnityEngine;
 
 public class ShowSpriteOnCollision : MonoBehaviour
 {
-    public SpriteRenderer otherSpriteRenderer; // Référence au SpriteRenderer de l'objet à afficher
+    public GameObject uiElement; // Référence à l'élément UI à afficher
 
     void OnTriggerEnter2D(Collider2D other)
     {
         // Vérifie si l'objet en collision est le joueur
         if (other.CompareTag("Player"))
         {
-            // Change l'opacité du SpriteRenderer de l'objet à afficher à 100%
-            if (otherSpriteRenderer != null)
+            // Active l'élément UI
+            if (uiElement != null)
             {
-                Color newColor = otherSpriteRenderer.color;
-                newColor.a = 1.0f; // Opacité à 100%
-                otherSpriteRenderer.color = newColor;
+                uiElement.SetActive(true);
             }
             else
             {
-                Debug.LogWarning("Other SpriteRenderer is not assigned!");
+                Debug.LogWarning("UI Element is not assigned!");
             }
         }
     }
@@ -28,16 +26,14 @@ public class ShowSpriteOnCollision : MonoBehaviour
         // Vérifie si l'objet en collision est le joueur
         if (other.CompareTag("Player"))
         {
-            // Change l'opacité du SpriteRenderer de l'objet à afficher à 0%
-            if (otherSpriteRenderer != null)
+            // Désactive l'élément UI
+            if (uiElement != null)
             {
-                Color newColor = otherSpriteRenderer.color;
-                newColor.a = 0.0f; // Opacité à 0%
-                otherSpriteRenderer.color = newColor;
+                uiElement.SetActive(false);
             }
             else
             {
-                Debug.LogWarning("Other SpriteRenderer is not assigned!");
+                Debug.LogWarning("UI Element is not assigned!");
             }
         }
     }
