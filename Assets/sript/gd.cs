@@ -8,6 +8,7 @@ public class EnemyKillCounter : MonoBehaviour
     private int requiredEnemyCount = 3; // Nombre d'ennemis requis pour activer le changement de scène
     public Text enemyCountText; // Référence au texte UI
     private bool canChangeScene = false; // Indicateur pour permettre le changement de scène
+    public string targetSceneName; // Nom de la scène cible à changer, assigné depuis l'inspecteur
 
     void Start()
     {
@@ -41,8 +42,15 @@ public class EnemyKillCounter : MonoBehaviour
     // Méthode pour changer de scène
     private void ChangeScene()
     {
-        Debug.Log("Changing scene...");
-        SceneManager.LoadScene(1); // Remplacer par le nom de la scène cible
+        if (!string.IsNullOrEmpty(targetSceneName))
+        {
+            Debug.Log("Changing scene to " + targetSceneName + "...");
+            SceneManager.LoadScene(targetSceneName); // Charger la scène spécifiée par le nom
+        }
+        else
+        {
+            Debug.LogWarning("Target scene name is not assigned!");
+        }
     }
 
     // Méthode pour mettre à jour le texte UI

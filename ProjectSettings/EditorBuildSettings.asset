@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.unity
     guid: e1f1397013a9bd048929f7dad4f6b357
+  - enabled: 1
+    path: Assets/Scenes/lenu.unity
+    guid: ebe36a49ed734024e8aa96ba55571e43
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: 26612394684a4594b96bc3fa04684dc6
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: a45fb1331e2e13445bb3b92b9e3696aa
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: 03a917c3a45a2a945925c1ad34c46f81
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: e7719d0d1394adf4b8fe7b9b54952f84
   m_configObjects: {}
