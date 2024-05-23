@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 1.5
-  attackCooldown: 1
+  attackCooldown: 0
 --- !u!114 &803300079
 MonoBehaviour:
   m_ObjectHideFlags: 0
