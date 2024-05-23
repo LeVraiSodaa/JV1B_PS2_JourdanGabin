@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     // Référence à l'EnemyKillCounter
     private EnemyKillCounter enemyKillCounter;
+    public GameObject deathParticlesPrefab;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
         {
             enemyKillCounter.EnemyDestroyed();
         }
+        Instantiate(deathParticlesPrefab, transform.position, Quaternion.identity);
 
         // Code pour détruire l'ennemi
         Destroy(gameObject);
