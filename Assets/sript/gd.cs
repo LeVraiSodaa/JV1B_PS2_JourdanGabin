@@ -4,11 +4,12 @@ using UnityEngine.UI;
 
 public class EnemyKillCounter : MonoBehaviour
 {
-    private int enemyCount = 0; // Compteur d'ennemis détruits
-    private int requiredEnemyCount = 3; // Nombre d'ennemis requis pour activer le changement de scène
+    public int requiredEnemyCount = 3; // Nombre d'ennemis requis pour activer le changement de scène
     public Text enemyCountText; // Référence au texte UI
-    private bool canChangeScene = false; // Indicateur pour permettre le changement de scène
     public string targetSceneName; // Nom de la scène cible à changer, assigné depuis l'inspecteur
+
+    private int enemyCount = 0; // Compteur d'ennemis détruits
+    private bool canChangeScene = false; // Indicateur pour permettre le changement de scène
 
     void Start()
     {

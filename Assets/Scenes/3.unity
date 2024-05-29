@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fd4ebf4d6d3c408ac725705ab14c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticlesPrefab: {fileID: 6009419941517846516, guid: c6e28f13b397b2345a2a8e6ef7f01e7d, type: 3}
 --- !u!1 &81901159
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fd4ebf4d6d3c408ac725705ab14c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticlesPrefab: {fileID: 0}
 --- !u!50 &81901161
 Rigidbody2D:
   serializedVersion: 4
@@ -800,6 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d020e89480bfbf45b030b1aea950cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredEnemyCount: 3
   enemyCountText: {fileID: 606386969}
   targetSceneName: 4
 --- !u!114 &270646453
@@ -3331,6 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fd4ebf4d6d3c408ac725705ab14c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticlesPrefab: {fileID: 6009419941517846516, guid: c6e28f13b397b2345a2a8e6ef7f01e7d, type: 3}
 --- !u!50 &1611164235
 Rigidbody2D:
   serializedVersion: 4
@@ -3532,6 +3536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fd4ebf4d6d3c408ac725705ab14c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticlesPrefab: {fileID: 6009419941517846516, guid: c6e28f13b397b2345a2a8e6ef7f01e7d, type: 3}
 --- !u!50 &1616615456
 Rigidbody2D:
   serializedVersion: 4
