@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/option.unity
     guid: 6234cb83bc59e7e47abb3f7edef56656
+  - enabled: 1
+    path: Assets/Scenes/levrai4.unity
+    guid: 7dfeea1ecc87a874bb2f6d295b583ef2
   m_configObjects: {}

@@ -9,6 +9,6 @@ public class Scenesfour : MonoBehaviour
     // Fonction pour charger la scène spécifiée
     public void LoadScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(10);
     }
 }
