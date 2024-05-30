@@ -2861,7 +2861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredEnemyCount: 4
   enemyCountText: {fileID: 606386969}
-  targetSceneName: 10
+  targetSceneName: levrai4
 --- !u!114 &270646453
 MonoBehaviour:
   m_ObjectHideFlags: 0
