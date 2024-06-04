@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f; // Vitesse de déplacement du joueur
     public float jumpForce = 10f; // Force du saut du joueur
+    private Animator animator;
 
     Rigidbody2D rb; // Référence au Rigidbody2D du joueur
     SpriteRenderer spriteRenderer; // Référence au SpriteRenderer du joueur
@@ -25,11 +26,13 @@ public class PlayerMovement : MonoBehaviour
         // Si tu veux que le personnage regarde dans la direction où il se déplace
         if (moveInput > 0)
         {
-            spriteRenderer.flipX = false; // Tourne le joueur vers la droite
+            spriteRenderer.flipX = true; // Tourne le joueur vers la droite
+            animator.Play("marche");
         }
         else if (moveInput < 0)
         {
-            spriteRenderer.flipX = true; // Tourne le joueur vers la gauche
+            spriteRenderer.flipX = false; // Tourne le joueur vers la gauche
+            animator.Play("marche");
         }
 
         // Saut
