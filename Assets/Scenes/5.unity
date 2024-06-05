@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d7111d89452964ebf0be423a7e8d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 487461635}
   speed: 7.19
   rotationSpeed: 624.6
 --- !u!212 &41551351
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d7111d89452964ebf0be423a7e8d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 487461635}
   speed: 7.19
   rotationSpeed: 624.6
 --- !u!212 &258066408
@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d020e89480bfbf45b030b1aea950cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredEnemyCount: 3
+  requiredEnemyCount: 4
   enemyCountText: {fileID: 606386969}
   targetSceneName: 6
 --- !u!114 &270646453
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cba902c39a2dc94e93ff936d8a1cf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesRequiredForFullPower: 3
+  enemiesRequiredForFullPower: 4
   powerBarSlider: {fileID: 500861310}
   powerBarText: {fileID: 1057087631}
 --- !u!1 &293273835
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d7111d89452964ebf0be423a7e8d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 487461635}
   speed: 7.19
   rotationSpeed: 624.6
 --- !u!212 &432815136
@@ -4295,7 +4295,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.13, y: 0.38}
+    oldSize: {x: 12.8, y: 7.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7137,7 +7137,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17417604, y: -1.2441816}
+  m_Offset: {x: 0.47162116, y: -1.2441816}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7148,7 +7148,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9882817, y: 3.4883633}
+  m_Size: {x: 2.840066, y: 3.4883633}
   m_EdgeRadius: 0
 --- !u!114 &831702899
 MonoBehaviour:
@@ -13609,8 +13609,8 @@ Transform:
   m_GameObject: {fileID: 1628238706}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.07, z: 0.143}
-  m_LocalScale: {x: 1.7833309, y: 1.8831335, z: 0.9974959}
+  m_LocalPosition: {x: -0.030004218, y: -0.07000102, z: 0.14299999}
+  m_LocalScale: {x: 3.8182461, y: 4.031931, z: 2.135714}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 487461635}
@@ -13640,7 +13640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955d1a6c13a342d4289fa7136294cbb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 1.5
+  attackRadius: 2.5
   attackCooldown: 1
 --- !u!212 &1628238710
 SpriteRenderer:
