@@ -11145,7 +11145,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 549328331608712616, guid: 5f19345ead568db4b857e91bb2095bb6, type: 3}
       propertyPath: smoothing
-      value: 1.92
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 549328331608712616, guid: 5f19345ead568db4b857e91bb2095bb6, type: 3}
       propertyPath: backgrounds.Array.data[0]
