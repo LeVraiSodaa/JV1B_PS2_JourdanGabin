@@ -2536,7 +2536,6 @@ GameObject:
   - component: {fileID: 1258428032}
   - component: {fileID: 1258428035}
   - component: {fileID: 1258428034}
-  - component: {fileID: 1258428033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2559,23 +2558,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644229174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1258428033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258428031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a0b9fdc918ee641affe809f40b8d52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgrounds:
-  - {fileID: 0}
-  parallaxScales:
-  - 0
-  smoothing: 3.1
 --- !u!81 &1258428034
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3794,7 +3776,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1644229174}
   - component: {fileID: 1644229173}
-  - component: {fileID: 1644229172}
   - component: {fileID: 1644229171}
   - component: {fileID: 1644229170}
   - component: {fileID: 1644229169}
@@ -4036,18 +4017,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 1.7}
   m_EdgeRadius: 0
---- !u!114 &1644229172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644229164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b4df09d83eac44e8604375b312b684, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1644229173
 SpriteRenderer:
   m_ObjectHideFlags: 0
