@@ -17,24 +17,14 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        // Si l'ennemi doit se déplacer vers la droite
+        // Déplacer l'ennemi
         if (moveRight)
         {
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-            // Si l'ennemi regarde vers la gauche, le retourner
-            if (spriteRenderer.flipX)
-            {
-                spriteRenderer.flipX = false;
-            }
         }
         else
         {
             transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-            // Si l'ennemi regarde vers la droite, le retourner
-            if (!spriteRenderer.flipX)
-            {
-                spriteRenderer.flipX = true;
-            }
         }
 
         // Met à jour le timer de déplacement
@@ -47,6 +37,8 @@ public class EnemyMovement : MonoBehaviour
             moveRight = !moveRight;
             // Réinitialise le timer de déplacement
             moveTimer = 0f;
+            // Retourner l'ennemi
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
         // Si l'ennemi est inactif
