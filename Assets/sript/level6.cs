@@ -9,6 +9,6 @@ public class Scenessix : MonoBehaviour
     // Fonction pour charger la scène spécifiée
     public void LoadScene()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(11);
     }
 }
